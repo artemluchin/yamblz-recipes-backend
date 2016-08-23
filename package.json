@@ -1,0 +1,21 @@
+{
+  "name": "Recipes",
+  "version": "1.0.0",
+  "description": "Web server for recipes database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "server",
+    "node",
+    "recipes"
+  ],
+  "author": "Artem Luchin",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}

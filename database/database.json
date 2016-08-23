@@ -1,0 +1,51 @@
+[{
+	"id": 1,
+	"title": "Бутерброд с авокадо",
+	"image": "intense-earth-33481.herokuapp.com/assets/recipe1/sandwich.jpg",
+	"stages": [{
+		"title": "Подготовьте авокадо",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe1/avokado.jpg",
+		"steps": ["Разрежьте пополам, удалите косточку и кожуру", "Нарежьте авокадо ломтиками"]
+	}, {
+		"title": "Нарежьте помидор",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe1/tomato.jpg",
+		"steps": ["Нарежьте помидор ломтиками"]
+	}, {
+		"title": "Соберите бутерброд",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe1/sandwich.jpg",
+		"steps": ["Намажьте хлеб сыром", "Положите сверху авокада и ломтик помидора", "Посолите по вкусу"]
+	}]
+},{
+	"id": 2,
+	"title": "Брускетта с томатами и моцареллой",
+	"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_main.jpg",
+	"stages": [{
+		"title": "Приготовьте сливочную смесь",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_stage1.jpg",
+		"steps": ["Мелко нарежьте чеснок", "Смешайте нарезанный чеснок с размягченным сливочным маслом"]
+	}, {
+		"title": "Нарежьте и смажьте хлеб",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_stage2.jpg",
+		"steps": ["Нарежьте хлеб крупными ломтиками", "Смажьте ломтики хлеба сливочной смесью"]
+	}, {
+		"title": "Нарежьте помидор",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe1/tomato.jpg",
+		"steps": ["Нарежьте помидор кольцами"]
+	}, {
+		"title": "Добавьте моцареллу",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_stage3.jpg",
+		"steps": ["Нарежьте моцареллу маленькими кусочками", "Положите моцареллу на хлебные ломтики"]
+	}, {
+		"title": "Запекайте хлеб в духовке",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_stage4.jpg",
+		"steps": ["Поставьте хлеб в духовку", "Достаньте хлеб, когда моцарелла немного расплавилась, а хлеб покрылся золотистой корочкой"]
+	}, {
+		"title": "Добавьте помидор и приправы",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_stage5.jpg",
+		"steps": ["Положите кольца помидоров сверху на моцареллу", "Посолите, поперчите по вкусу", "Посыпьте сверху мелконарезанным базиликом"]
+	}, {
+		"title": "Запекайте хлеб в духовке",
+		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_main.jpg",
+		"steps": ["Поставьте хлеб в духовку примерно на одну минуту", "Достаньте хлеб из духовки", "Брускетта готова!"]
+	}]
+}]
