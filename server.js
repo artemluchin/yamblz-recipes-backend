@@ -12,18 +12,18 @@ app.use(bodyParser.json());
 app.set('port', (process.env.PORT || 3000));
 
 app.get('/recipes/:id', (req, res) => {
-	const recipeId = req.params.id;
+  const recipeId = req.params.id;
 
-	fs.readFile(DB, 'utf-8', (err, data) => {
+  fs.readFile(DB, 'utf-8', (err, data) => {
     if (err) throw err;
 
     const recipes = JSON.parse(data);
-		const recipe = recipes.filter(recipe => recipe.id === Number(recipeId))[0];
+    const recipe = recipes.filter(recipe => recipe.id === Number(recipeId))[0];
 
     res.json(recipe);
   });
 });
 
 app.listen(app.get('port'), () => {
-	console.log("App is listening on port ", app.get('port'));
+  console.log("App is listening on port ", app.get('port'));
 });
