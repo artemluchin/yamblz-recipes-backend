@@ -1,6 +1,9 @@
 [{
 	"id": 1,
 	"title": "Бутерброд с авокадо",
+  "cookingTime": 10,
+  "kcal": 240,
+  "complexity": "Просто",
 	"image": "intense-earth-33481.herokuapp.com/assets/recipe1/sandwich.jpg",
 	"stages": [{
 		"title": "Подготовьте авокадо",
@@ -13,11 +16,14 @@
 	}, {
 		"title": "Соберите бутерброд",
 		"image": "intense-earth-33481.herokuapp.com/assets/recipe1/sandwich.jpg",
-		"steps": ["Намажьте хлеб сыром", "Положите сверху авокада и ломтик помидора", "Посолите по вкусу"]
+		"steps": ["Намажьте хлеб сыром", "Положите сверху авокадо и ломтик помидора", "Посолите по вкусу"]
 	}]
 },{
 	"id": 2,
 	"title": "Брускетта с томатами и моцареллой",
+  "cookingTime": 20,
+  "kcal": 254,
+  "complexity": "Просто",
 	"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_main.jpg",
 	"stages": [{
 		"title": "Приготовьте сливочную смесь",
