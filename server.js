@@ -24,6 +24,25 @@ app.get('/recipes/:id', (req, res) => {
   });
 });
 
+app.get('/categories', (req, res) => {
+  const categories = req.query.categories;
+
+  fs.readFile(DB, 'utf-8', (err, data) => {
+    if (err) throw err;
+
+    const recipes = JSON.parse(data);
+    const result = {};
+    recipes.forEach((item) => {
+      if (categories.includes(item.event)) {
+        result[item.event] = result[item.event] || []
+        result[item.event].push(item);
+      }
+    })
+
+    res.json(result);
+  });
+})
+
 app.listen(app.get('port'), () => {
   console.log("App is listening on port ", app.get('port'));
 });

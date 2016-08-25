@@ -24,6 +24,7 @@
   "cookingTime": 20,
   "kcal": 254,
   "complexity": "Просто",
+  "event": 1,
 	"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_main.jpg",
 	"stages": [{
 		"title": "Приготовьте сливочную смесь",
@@ -54,4 +55,76 @@
 		"image": "intense-earth-33481.herokuapp.com/assets/recipe2/brusketta_main.jpg",
 		"steps": ["Поставьте хлеб в духовку примерно на одну минуту", "Достаньте хлеб из духовки", "Брускетта готова!"]
 	}]
+}, {
+  "id": 3,
+  "title": "Фриттата с брокколи и сладким перцем",
+  "cookingTime": 24,
+  "kcal": 324,
+  "complexity": "Средне",
+  "event": 1,
+  "image": "",
+  "stages": []
+}, {
+  "id": 4,
+  "title": "Панини с жареным яйцом",
+  "cookingTime": 24,
+  "kcal": 423,
+  "complexity": "Просто",
+  "event": 1,
+  "image": "",
+  "stages": []
+}, {
+  "id": 5,
+  "title": "Курица меланезе со спагетти",
+  "cookingTime": 24,
+  "kcal": 125,
+  "complexity": "Сложно",
+  "event": 2,
+  "image": "",
+  "stages": []
+}, {
+  "id": 6,
+  "title": "Ризотто со сливками и сладким перцем",
+  "cookingTime": 24,
+  "kcal": 654,
+  "complexity": "Средне",
+  "event": 2,
+  "image": "",
+  "stages": []
+}, {
+  "id": 7,
+  "title": "Паста с сардинами",
+  "cookingTime": 24,
+  "kcal": 654,
+  "complexity": "Средне",
+  "event": 2,
+  "image": "",
+  "stages": []
+}, {
+  "id": 8,
+  "title": "Классическая лазанья",
+  "cookingTime": 24,
+  "kcal": 654,
+  "complexity": "Средне",
+  "event": 3,
+  "image": "",
+  "stages": []
+}, {
+  "id": 9,
+  "title": "Свинина с грибами и сельдереем",
+  "cookingTime": 24,
+  "kcal": 654,
+  "complexity": "Средне",
+  "event": 3,
+  "image": "",
+  "stages": []
+}, {
+  "id": 10,
+  "title": "Меланзана алла пармиджана",
+  "cookingTime": 24,
+  "kcal": 654,
+  "complexity": "Средне",
+  "event": 3,
+  "image": "",
+  "stages": []
 }]
