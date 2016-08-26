@@ -25,15 +25,19 @@ app.get('/recipes/:id', (req, res) => {
 });
 
 app.get('/categories', (req, res) => {
-  const categories = req.query.categories;
+  const query = req.query.categories;
+  // console.log(query.split(','))
 
   fs.readFile(DB, 'utf-8', (err, data) => {
     if (err) throw err;
 
     const recipes = JSON.parse(data);
     const result = {};
+    // query.forEach((id, i) => {
+    //   result.concat(recipes.filter((recipe) => recipe.event));
+    // })
     recipes.forEach((item) => {
-      if (categories.includes(item.event)) {
+      if (query.includes(item.event)) {
         result[item.event] = result[item.event] || []
         result[item.event].push(item);
       }
