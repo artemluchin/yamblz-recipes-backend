@@ -12,7 +12,7 @@ const url = 'mongodb://admin:kitchen2016@ds063715.mlab.com:63715/kitchen';
 
 const Schema = mongoose.Schema;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'database')));
 app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 3000));
