@@ -59,7 +59,7 @@ app.get('/recipes/:id', (req, res) => {
 
   Recipe.find({id: recipeId}).exec((err, recipe) => {
     if (err) throw err;
-    res.json(recipe);
+    res.json(recipe[0]);
   })
 })
 
