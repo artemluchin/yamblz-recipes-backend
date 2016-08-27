@@ -11,7 +11,7 @@ const recipesSchema = mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'categories'
   },
-  products: [{
+  ingredients: [{
     product: {
       type: Schema.Types.ObjectId,
       ref: 'products'
