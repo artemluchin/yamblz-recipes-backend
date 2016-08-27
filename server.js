@@ -29,6 +29,13 @@ const recipesSchema = ({
   kcal: Number,
   complexity: String,
   category: Number,
+  products: [{
+    product: {
+      type: Schema.Types.ObjectId,
+      ref: 'products'
+    },
+    amount: Number
+  }],
   stages: [{
     title: String,
     image: String,
@@ -43,10 +50,20 @@ const categoriesSchema = ({
     type: Schema.Types.ObjectId,
     ref: 'recipes'
   }]
-})
+});
+
+const productsSchema = ({
+  title: String,
+  defaultMeasure: String,
+  alternatives: [{
+    type: Schema.Types.ObjectId,
+    ref: 'products'
+  }]
+});
 
 const Recipe = mongoose.model('recipes', recipesSchema);
 const Category = mongoose.model('categories', categoriesSchema);
+const Product = mongoose.model('products', productsSchema);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -57,7 +74,7 @@ db.once('open', () => {
 app.get('/recipes/:id', (req, res) => {
   const recipeId = req.params.id;
 
-  Recipe.find({id: recipeId}).exec((err, recipe) => {
+  Recipe.find({id: recipeId}).populate('products.product').exec((err, recipe) => {
     if (err) throw err;
     res.json(recipe[0]);
   })
