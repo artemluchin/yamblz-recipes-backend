@@ -71,7 +71,14 @@ db.once('open', () => {
   console.log('Connected to DB');
 });
 
-app.get('/recipes/:id', (req, res) => {
+app.get('/recipes', (req, res) => {
+  Recipe.find((err, data) => {
+    if (err) throw err;
+    res.json(data);
+  })
+});
+
+app.get('/recipe/:id', (req, res) => {
   const recipeId = req.params.id;
 
   Recipe.find({id: recipeId}).populate('products.product').exec((err, recipe) => {
