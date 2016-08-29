@@ -4,14 +4,15 @@ const Schema = mongoose.Schema
 const recipesSchema = mongoose.Schema({
   title: String,
   image: String,
-  cookingTime: Number,
-  kcal: Number,
+  time: Number,
+  energy: Number,
   complexity: String,
-  categories: {
+  categories: [{
     type: Schema.Types.ObjectId,
     ref: 'categories'
-  },
+  }],
   ingredients: [{
+    _id: false,
     product: {
       type: Schema.Types.ObjectId,
       ref: 'products'
@@ -19,6 +20,7 @@ const recipesSchema = mongoose.Schema({
     amount: Number
   }],
   stages: [{
+    _id: false,
     title: String,
     image: String,
     steps: [String]
@@ -26,7 +28,6 @@ const recipesSchema = mongoose.Schema({
 });
 
 const categoriesSchema = mongoose.Schema({
-  id: Number,
   title: String,
   recipes: [{
     type: Schema.Types.ObjectId,
