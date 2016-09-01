@@ -5,19 +5,19 @@ const Products = mongoose.model('products')
 
 const getResults = (query) => {
   const recipes =  new Promise((res, rej) => {
-    Recipes.find().exec((err, recipes) => {
+    Recipes.find({title: new RegExp('^'+query, 'ig')}).exec((err, recipes) => {
       if (err) return rej(err)
       return res({recipes: recipes})
     })
   })
   const categories =  new Promise((res, rej) => {
-    Categories.find().exec((err, categories) => {
+    Categories.find({title: new RegExp('^'+query, 'ig')}).exec((err, categories) => {
       if (err) return rej(err)
       return res({categories: categories})
     })
   })
   const products =  new Promise((res, rej) => {
-    Products.find().exec((err, products) => {
+    Products.find({title: new RegExp('^'+query, 'ig')}).exec((err, products) => {
       if (err) return rej(err)
       return res({products: products})
     })
