@@ -6,7 +6,6 @@ const recipesSchema = mongoose.Schema({
   image: String,
   time: Number,
   energy: Number,
-  complexity: String,
   categories: [{
     type: Schema.Types.ObjectId,
     ref: 'categories'
