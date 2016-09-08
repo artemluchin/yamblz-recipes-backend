@@ -16,14 +16,23 @@ const recipesSchema = mongoose.Schema({
       type: Schema.Types.ObjectId,
       ref: 'products'
     },
-    amount: Number
+    amount: Number,
+		measure: String,
+		isMain: Boolean,
+		extra: Boolean
   }],
   stages: [{
     _id: false,
     title: String,
     image: String,
-    steps: [String]
+    steps: [{
+			title: String,
+			requiredProduct: String,
+			productsForStep: [String]
+		}]
   }]
+}, {
+	timestamps: true
 });
 
 const categoriesSchema = mongoose.Schema({
@@ -32,15 +41,21 @@ const categoriesSchema = mongoose.Schema({
     type: Schema.Types.ObjectId,
     ref: 'recipes'
   }]
+}, {
+	timestamps: true
 });
 
 const productsSchema = mongoose.Schema({
   title: String,
-  defaultMeasure: String,
+  measure: String,
+	baseMeasure: String,
+	image: String,
   alternatives: [{
     type: Schema.Types.ObjectId,
     ref: 'products'
   }]
+}, {
+	timestamps: true
 })
 
 mongoose.model('recipes', recipesSchema);
