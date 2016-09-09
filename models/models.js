@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const random = require('mongoose-simple-random')
 const Schema = mongoose.Schema
 
 const recipesSchema = mongoose.Schema({
@@ -56,7 +57,11 @@ const productsSchema = mongoose.Schema({
   }]
 }, {
 	timestamps: true
-})
+});
+
+recipesSchema.plugin(random)
+categoriesSchema.plugin(random)
+productsSchema.plugin(random)
 
 mongoose.model('recipes', recipesSchema);
 mongoose.model('categories', categoriesSchema);
