@@ -3,8 +3,8 @@ const getResults = require('./search/getResults')
 
 router.get('', (req, res) => {
 	const query = req.query.q
-	console.log(query)
   getResults(query).then(results => {
+		if (results.length === 0) res.json({recipes: [], categories: [], products: []})
 		var result = {}
 		results.forEach(item => result = Object.assign(result, item))
 		res.json(result)

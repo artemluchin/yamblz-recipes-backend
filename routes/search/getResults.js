@@ -4,8 +4,9 @@ const Categories = mongoose.model('categories')
 const Products = mongoose.model('products')
 
 const getResults = (query) => {
+	if (query === '') return Promise.resolve([])
   const recipes =  new Promise((res, rej) => {
-    Recipes.find({title: new RegExp('^'+query, 'ig')}).select('title image energy time').exec((err, recipes) => {
+    Recipes.find({title: new RegExp(query, 'ig')}).select('title image energy time').exec((err, recipes) => {
       if (err) return rej(err)
       return res({recipes: recipes})
     })
