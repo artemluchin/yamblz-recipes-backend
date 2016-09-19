@@ -3,6 +3,13 @@ const Recipes = mongoose.model('recipes')
 const Categories = mongoose.model('categories')
 const Products = mongoose.model('products')
 
+/**
+ * Возвращает коллекцию рецептов, категорий и продуктов, которые удовлетворяют
+ * поисковому запросу
+ *
+ * @param {String} query поисковый запрос
+ * @return {Array}
+ */
 const getResults = (query) => {
 	if (query === '') return Promise.resolve([])
   const recipes =  new Promise((res, rej) => {

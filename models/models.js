@@ -18,22 +18,22 @@ const recipesSchema = mongoose.Schema({
       ref: 'products'
     },
     amount: Number,
-		measure: String,
-		isMain: Boolean,
-		extra: Boolean
+    measure: String,
+    isMain: Boolean,
+    extra: Boolean
   }],
   stages: [{
     _id: false,
     title: String,
     image: String,
     steps: [{
-			title: String,
-			requiredProduct: String,
-			productsForStep: [String]
-		}]
+      title: String,
+      requiredProduct: String,
+      productsForStep: [String]
+    }]
   }]
 }, {
-	timestamps: true
+  timestamps: true
 });
 
 const categoriesSchema = mongoose.Schema({
@@ -43,20 +43,19 @@ const categoriesSchema = mongoose.Schema({
     ref: 'recipes'
   }]
 }, {
-	timestamps: true
+  timestamps: true
 });
 
 const productsSchema = mongoose.Schema({
   title: String,
-  measure: String,
-	baseMeasure: String,
-	image: String,
+  baseMeasure: String,
+  image: String,
   alternatives: [{
     type: Schema.Types.ObjectId,
     ref: 'products'
   }]
 }, {
-	timestamps: true
+  timestamps: true
 });
 
 recipesSchema.plugin(random)
